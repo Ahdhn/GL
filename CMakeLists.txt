@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
 
 #Project name 
-set(project_name "CUDATemplate")#<TODO> change this to the name of your project 
+set(project_name "CUDAGL")#<TODO> change this to the name of your project 
 project(${project_name} LANGUAGES CXX C CUDA)  
 
 #toggle between building a shared or static library
@@ -70,4 +70,7 @@ endif()
 
 enable_testing()
 
+add_subdirectory(external/)
+add_definitions(-DGLFW_INCLUDE_NONE)
+				
 add_subdirectory(GL)
